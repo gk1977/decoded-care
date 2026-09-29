@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Decoded.Care: Inside Medicare Advantage</title>
+<meta name="description" content="Decoded.Care: Inside Medicare Advantage. A guide for healthcare leaders, clinicians, and the members who trust them, from an operator who has run Medicare Advantage as a CFO, chief Medicare officer, and plan CEO.">
+<link rel="canonical" href="https://decoded.care/">
+<meta name="theme-color" content="#0A2F5C">
+
+<meta property="og:type" content="book">
+<meta property="og:site_name" content="Decoded.Care">
+<meta property="og:title" content="Decoded.Care: Inside Medicare Advantage">
+<meta property="og:description" content="A guide for healthcare leaders, clinicians, and the members who trust them, written from inside Medicare Advantage.">
+<meta property="og:url" content="https://decoded.care/">
+<meta property="og:image" content="https://decoded.care/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Decoded.Care: Inside Medicare Advantage">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://decoded.care/#site",
+      "url": "https://decoded.care/",
+      "name": "Decoded.Care"
+    },
+    {
+      "@type": "Book",
+      "@id": "https://decoded.care/#book",
+      "name": "Decoded.Care: Inside Medicare Advantage",
+      "alternativeHeadline": "A Guide for Healthcare Leaders, Clinicians, and the Members Who Trust Them",
+      "about": "Medicare Advantage",
+      "inLanguage": "en",
+      "url": "https://decoded.care/"
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --navy:#0A2F5C;
+  --navy-deep:#071F3E;
+  --teal:#008F8F;          /* brand Insight Teal: large text, marks, rules */
+  --teal-text:#007676;     /* small teal text on light backgrounds (5.45:1) */
+  --teal-on-navy:#5FCACA;  /* small teal text on navy */
+  --btn:#007A7A;           /* button fill: white text passes AA at body size */
+  --btn-hover:#006565;
+  --cream:#F7FAFC;
+  --white:#FFFFFF;
+  --ink:#16263A;
+  --muted:#4A5B6E;
+  --line:#DCE4EC;
+  --radius:8px;
+  --maxw:1120px;
+  --font-head:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --font-body:"Merriweather",Georgia,"Times New Roman",serif;
+  --font-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.75;font-weight:300}
+img,svg{display:block;max-width:100%}
+a{color:var(--teal-text);text-underline-offset:3px}
+a:hover{color:var(--navy)}
+h1,h2,h3{font-family:var(--font-head);color:var(--navy);line-height:1.15;letter-spacing:-0.015em;margin:0}
+h2{font-size:clamp(1.75rem,3.2vw,2.4rem);font-weight:800}
+h3{font-size:1.15rem;font-weight:700;letter-spacing:-0.005em}
+p{margin:0 0 1.1em}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+@media (max-width:600px){.wrap{padding:0 16px}}
+.eyebrow{font-family:var(--font-mono);font-size:.78rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-text);margin:0 0 14px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--white);color:var(--navy);padding:10px 14px;z-index:100;font-family:var(--font-head)}
+.skip:focus{left:12px;top:12px}
+:focus-visible{outline:3px solid var(--teal-on-navy);outline-offset:3px;border-radius:4px}
+
+/* ---------- header ---------- */
+.site-header{background:var(--navy);position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--white)}
+.brand svg{width:34px;height:34px;flex:none}
+.brand span{font-family:var(--font-head);font-weight:700;font-size:1.2rem;letter-spacing:-0.01em}
+.brand span b{color:var(--teal-on-navy);font-weight:700}
+.nav{display:flex;align-items:center;gap:28px;font-family:var(--font-head);font-size:.95rem;font-weight:500}
+.nav a{color:#D6E2EE;text-decoration:none}
+.nav a:hover{color:var(--white)}
+.nav .nav-cta{color:var(--white);border:1.5px solid rgba(255,255,255,.55);padding:8px 16px;border-radius:var(--radius)}
+.nav .nav-cta:hover{border-color:var(--white)}
+@media (max-width:820px){.nav a:not(.nav-cta){display:none}}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-head);font-weight:600;font-size:1rem;line-height:1;padding:15px 24px;border-radius:var(--radius);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background-color .15s,border-color .15s,color .15s}
+.btn-primary{background:var(--btn);color:var(--white)}
+.btn-primary:hover{background:var(--btn-hover);color:var(--white)}
+.btn-outline{background:transparent;color:var(--white);border-color:rgba(255,255,255,.7)}
+.btn-outline:hover{border-color:var(--white);color:var(--white);background:rgba(255,255,255,.06)}
+
+/* ---------- hero ---------- */
+.hero{background:var(--navy);color:#E3ECF5;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-220px;top:-180px;width:640px;height:640px;border-radius:50%;border:1px solid rgba(95,202,202,.14);box-shadow:0 0 0 70px rgba(95,202,202,.035),0 0 0 140px rgba(95,202,202,.025)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center;padding-top:88px;padding-bottom:104px}
+.hero .eyebrow{color:var(--teal-on-navy)}
+.hero h1{color:var(--white);font-size:clamp(2.4rem,5.4vw,4rem);font-weight:800;letter-spacing:-0.03em;line-height:1.04}
+.hero h1 .sub{display:block;color:var(--teal-on-navy);font-weight:700;margin-top:6px}
+.hero .dek{font-family:var(--font-head);font-size:1.18rem;line-height:1.55;color:#C9D7E6;font-weight:400;margin:22px 0 0;max-width:34em}
+.hero .lede{margin:22px 0 34px;max-width:34em;font-size:1.02rem;color:#D3DEEA}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px}
+.hero .status{margin-top:28px;font-family:var(--font-mono);font-size:.78rem;letter-spacing:.08em;color:#9FB4CA}
+.hero .status::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--teal-on-navy);margin-right:10px;vertical-align:1px}
+@media (max-width:900px){
+  .hero .wrap{grid-template-columns:1fr;gap:56px;padding-top:56px;padding-bottom:72px}
+  .cover-wrap{order:2}
+}
+
+/* ---------- typographic cover ---------- */
+.cover-wrap{display:flex;justify-content:center}
+.cover{width:min(100%,340px);aspect-ratio:2/3;background:linear-gradient(160deg,#0D3A70 0%,var(--navy) 45%,var(--navy-deep) 100%);border-radius:4px 10px 10px 4px;box-shadow:0 30px 60px -20px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.08) inset,8px 0 0 -4px rgba(0,0,0,.25) inset;padding:34px 28px 28px;display:flex;flex-direction:column;position:relative;transform:rotate(1.5deg)}
+.cover::after{content:"";position:absolute;left:0;top:0;bottom:0;width:10px;background:linear-gradient(90deg,rgba(0,0,0,.35),rgba(0,0,0,0));border-radius:4px 0 0 4px}
+.cover svg{width:58px;height:58px}
+.cover .c-title{font-family:var(--font-head);color:var(--white);font-weight:800;font-size:2rem;letter-spacing:-0.03em;line-height:1;margin-top:auto}
+.cover .c-title b{color:var(--teal-on-navy);font-weight:800}
+.cover .c-rule{width:48px;height:3px;background:var(--teal-on-navy);margin:16px 0 14px}
+.cover .c-sub{font-family:var(--font-head);color:#D6E2EE;font-size:.95rem;font-weight:600;line-height:1.3}
+.cover .c-sub2{font-family:var(--font-body);font-style:italic;color:#A9BDD2;font-size:.78rem;line-height:1.45;margin-top:8px}
+.cover .c-author{font-family:var(--font-mono);color:var(--white);font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;margin-top:28px;padding-top:14px;border-top:1px solid rgba(255,255,255,.14)}
+
+/* ---------- sections ---------- */
+section{padding:96px 0}
+@media (max-width:600px){section{padding:68px 0}}
+.bg-cream{background:var(--cream)}
+.section-head{max-width:720px;margin-bottom:48px}
+.section-head p{color:var(--muted);margin-top:16px;font-size:1.05rem}
+
+/* premise */
+.premise .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:start}
+.premise blockquote{margin:0;font-family:var(--font-body);font-size:clamp(1.45rem,2.6vw,1.9rem);line-height:1.45;color:var(--navy);font-weight:400;font-style:italic;border-left:4px solid var(--teal);padding-left:28px}
+.premise blockquote cite{display:block;margin-top:18px;font-style:normal;font-family:var(--font-mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.premise .body p{font-size:1.05rem}
+@media (max-width:900px){.premise .wrap{grid-template-columns:1fr;gap:40px}}
+
+/* three lenses */
+.lenses{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.lens{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:30px 28px 28px;position:relative}
+.lens::before{content:"";position:absolute;left:28px;right:28px;top:0;height:3px;background:var(--teal);border-radius:0 0 3px 3px}
+.lens .tag{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-text);margin-bottom:12px}
+.lens h3{font-size:1.3rem;margin-bottom:12px}
+.lens p{font-size:.98rem;color:var(--muted);margin:0}
+.lens .who{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);font-family:var(--font-head);font-size:.9rem;color:var(--ink)}
+.lens .who strong{color:var(--navy)}
+@media (max-width:900px){.lenses{grid-template-columns:1fr}}
+.stool{margin-top:40px;display:flex;gap:18px;align-items:flex-start;background:var(--navy);color:#D3DEEA;border-radius:12px;padding:26px 28px}
+.stool svg{flex:none;width:44px;height:44px;margin-top:2px}
+.stool p{margin:0;font-size:1rem}
+.stool strong{font-family:var(--font-head);color:var(--white);font-weight:700}
+
+/* what's inside */
+.topics{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px;list-style:none;margin:0;padding:0;counter-reset:t}
+.topics li{counter-increment:t;display:grid;grid-template-columns:44px 1fr;gap:6px;padding:22px 0;border-top:1px solid var(--line)}
+.topics li::before{content:counter(t,decimal-leading-zero);font-family:var(--font-mono);font-size:.82rem;color:var(--teal-text);padding-top:3px}
+.topics h3{font-size:1.05rem;margin-bottom:4px}
+.topics p{margin:0;font-size:.95rem;color:var(--muted);line-height:1.65}
+@media (max-width:760px){.topics{grid-template-columns:1fr}}
+
+/* author */
+.author .wrap{display:grid;grid-template-columns:260px 1fr;gap:64px;align-items:start}
+.monogram{width:100%;aspect-ratio:1;border-radius:14px;background:var(--navy);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.monogram svg{width:46%;height:46%;position:relative;z-index:1}
+.monogram::after{content:"";position:absolute;inset:auto -40px -40px auto;width:160px;height:160px;border-radius:50%;background:rgba(95,202,202,.12)}
+.roles{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.roles li{font-family:var(--font-head);font-size:.95rem;font-weight:600;color:var(--navy);background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;line-height:1.35}
+.roles li small{display:block;font-family:var(--font-mono);font-weight:500;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-text);margin-bottom:4px}
+@media (max-width:900px){.author .wrap{grid-template-columns:1fr;gap:36px}.monogram{max-width:200px}}
+@media (max-width:520px){.roles{grid-template-columns:1fr}}
+
+/* signup */
+.signup{background:var(--navy);color:#D3DEEA}
+.signup .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.signup h2{color:var(--white)}
+.signup .eyebrow{color:var(--teal-on-navy)}
+.signup p{color:#C9D7E6}
+.form{background:var(--white);border-radius:14px;padding:30px;color:var(--ink);box-shadow:0 24px 48px -24px rgba(0,0,0,.5)}
+.field{margin-bottom:18px}
+.field label{display:block;font-family:var(--font-head);font-weight:600;font-size:.9rem;color:var(--navy);margin-bottom:7px}
+.field input,.field select{width:100%;font:inherit;font-family:var(--font-head);font-weight:400;font-size:1rem;color:var(--ink);background:var(--white);border:1.5px solid #B9C6D3;border-radius:var(--radius);padding:12px 14px;min-height:48px}
+.field input:focus,.field select:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(0,143,143,.18)}
+.form .btn{width:100%}
+.form .fine{font-family:var(--font-head);font-size:.8rem;color:var(--muted);margin:14px 0 0;line-height:1.5}
+.form-msg{font-family:var(--font-head);font-size:.95rem;margin:14px 0 0;min-height:1.4em}
+.form-msg.ok{color:#0B6B3A}
+.form-msg.err{color:#A12B2B}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+@media (max-width:900px){.signup .wrap{grid-template-columns:1fr;gap:36px}}
+
+/* footer */
+footer{background:var(--navy-deep);color:#9FB4CA;font-family:var(--font-head);font-size:.88rem;padding:40px 0}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between}
+footer .brand span{font-size:1rem}
+footer .brand svg{width:26px;height:26px}
+footer .tagline{font-family:var(--font-body);font-style:italic;color:#C9D7E6}
+footer a{color:#C9D7E6}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Cipher Dot mark: 100-unit circle, keyhole = 25-unit loop + 20×35 shaft -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="cipher-dot" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="50" fill="#008F8F"/>
+      <circle cx="50" cy="37.5" r="12.5" fill="#0A2F5C"/>
+      <path d="M40 45 H60 L60 80 H40 Z" fill="#0A2F5C"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Decoded.Care home">
+      <svg aria-hidden="true"><use href="#cipher-dot"/></svg>
+      <span>Decoded<b>.</b>Care</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#book">The book</a>
+      <a href="#readers">Who it's for</a>
+      <a href="#inside">Inside</a>
+      <a href="#author">Author</a>
+      <a class="nav-cta" href="#updates">Get updates</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <div class="hero" id="top">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">A book from inside Medicare Advantage</p>
+        <h1>Decoded.Care<span class="sub">Inside Medicare Advantage</span></h1>
+        <p class="dek">A Guide for Healthcare Leaders, Clinicians, and the Members Who Trust Them</p>
+        <p class="lede">Two decades inside Medicare Advantage, as a divisional CFO, a chief Medicare officer, a plan CEO, and now an operator again, turned into a practical playbook for running a plan that works financially, clinically, and operationally.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#updates">Get launch updates</a>
+          <a class="btn btn-outline" href="#book">About the book</a>
+        </div>
+        <p class="status">IN PREPARATION FOR PUBLICATION</p>
+      </div>
+      <div class="cover-wrap" aria-hidden="true">
+        <div class="cover">
+          <svg><use href="#cipher-dot"/></svg>
+          <div class="c-title">Decoded<b>.</b><br>Care</div>
+          <div class="c-rule"></div>
+          <div class="c-sub">Inside Medicare Advantage</div>
+          <div class="c-sub2">A Guide for Healthcare Leaders, Clinicians, and the Members Who Trust Them</div>
+          <div class="c-author">Medicare Advantage, decoded.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PREMISE -->
+  <section id="book" class="premise">
+    <div class="wrap">
+      <blockquote>
+        Medicare Advantage doesn't fail in dramatic explosions. It fails in small, rational decisions that no one slows down enough to question.
+        <cite>From Decoded.Care</cite>
+      </blockquote>
+      <div class="body">
+        <p class="eyebrow">Why this book</p>
+        <h2>Plans that work on paper. And plans that work for people.</h2>
+        <p style="margin-top:20px">Medicare Advantage is one of the great operating achievements in American healthcare. Running a plan well is also one of the hardest jobs in it. The same mistakes repeat at scale: plans that pencil out on paper but quietly drift toward insolvency, physicians worn down by incentives that point the wrong way, members whose experience erodes one operational shortcut at a time.</p>
+        <p>None of it comes from malice. It comes from reasonable decisions made in isolation. <em>Decoded.Care</em> translates what actually works into a playbook, one that treats operational excellence as moral work and holds that the people Medicare Advantage serves have earned better than cleverness.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THREE READERS -->
+  <section id="readers" class="bg-cream">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">One chapter, three lenses</p>
+        <h2>Written for everyone who sits at the table.</h2>
+        <p>Every chapter follows the same decision through three sets of eyes, because in Medicare Advantage a choice made in the finance office lands in the exam room and, eventually, at a member's kitchen table.</p>
+      </div>
+      <div class="lenses">
+        <article class="lens">
+          <div class="tag">The plan lens</div>
+          <h3>Healthcare leaders</h3>
+          <p>How the money really moves: revenue, risk adjustment, medical cost, Star Ratings, distribution, and the trade-offs behind every line of a plan P&amp;L.</p>
+          <div class="who">Followed through <strong>Mark</strong>, a health plan executive.</div>
+        </article>
+        <article class="lens">
+          <div class="tag">The clinical lens</div>
+          <h3>Clinicians</h3>
+          <p>What plan decisions look like from the exam room: networks, prior authorization, value-based contracts, and incentives that help or hurt good care.</p>
+          <div class="who">Followed through <strong>Dr. Sarna</strong>, a practicing physician.</div>
+        </article>
+        <article class="lens">
+          <div class="tag">The member lens</div>
+          <h3>Members and families</h3>
+          <p>What it means to choose, use, and depend on a plan: benefits, access, care after a hospital stay, and your rights when the answer is no.</p>
+          <div class="who">Followed through <strong>Gloria</strong>, a Medicare Advantage member.</div>
+        </article>
+      </div>
+      <div class="stool">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="11" rx="17" ry="5" fill="none" stroke="#5FCACA" stroke-width="3"/><path d="M12 15 L7 42 M24 16 L24 44 M36 15 L41 42" stroke="#5FCACA" stroke-width="3" stroke-linecap="round" fill="none"/></svg>
+        <p><strong>The three-legged stool.</strong> Financial discipline, clinical trust, and member access. A plan that lets any one leg go short eventually tips over, no matter how strong the other two look.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S INSIDE -->
+  <section id="inside">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">What's inside</p>
+        <h2>The operating system of a Medicare Advantage plan, decoded.</h2>
+        <p>Chapter by chapter, the book works through the machinery most people only see from one side.</p>
+      </div>
+      <ol class="topics">
+        <li><div><h3>The economics</h3><p>Where Medicare Advantage dollars come from and where they go.</p></div></li>
+        <li><div><h3>The competitive landscape</h3><p>How the largest carriers compete, and what scale does and doesn't buy.</p></div></li>
+        <li><div><h3>Risk adjustment and coding</h3><p>Accurate documentation, audit exposure, and why the middle is the only safe place.</p></div></li>
+        <li><div><h3>Distribution and marketing</h3><p>Brokers, commissions, and the real cost of acquiring and keeping a member.</p></div></li>
+        <li><div><h3>Reading the P&amp;L</h3><p>Medical loss ratio, medical cost trend, and what the numbers are trying to tell you.</p></div></li>
+        <li><div><h3>Networks and access</h3><p>Adequacy, provider relationships, and networks that perform.</p></div></li>
+        <li><div><h3>Care after the hospital</h3><p>The fragile window when coordination matters most.</p></div></li>
+        <li><div><h3>Social needs and root causes</h3><p>Food, transportation, and housing, and when addressing them pays off.</p></div></li>
+        <li><div><h3>Value-based care</h3><p>Targeted care and accountability shared between plan and provider.</p></div></li>
+        <li><div><h3>Quality and Star Ratings</h3><p>How quality is measured and how performance gets rewarded.</p></div></li>
+        <li><div><h3>Appeals and member rights</h3><p>How denials, appeals, and grievances actually work.</p></div></li>
+        <li><div><h3>Compliance and enforcement</h3><p>The rules, the audits, and the lessons regulators keep teaching.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- AUTHOR -->
+  <section id="author" class="author bg-cream">
+    <div class="wrap">
+      <div class="monogram" aria-hidden="true"><svg><use href="#cipher-dot"/></svg></div>
+      <div>
+        <p class="eyebrow">About the author</p>
+        <h2>Written by an operator.</h2>
+        <p style="margin-top:20px">The author has spent two decades inside Medicare Advantage at every altitude that matters: divisional CFO, chief Medicare officer, and health plan CEO, and an operator again today. A two-time CEO and veteran managed care executive, he wrote the book from the inside, not from the sidelines.</p>
+        <p><em>Decoded.Care</em> is his attempt to write down what actually works, so that the next generation of plan leaders, clinicians, and members doesn't have to learn it the expensive way.</p>
+        <ul class="roles">
+          <li><small>Finance</small>Divisional CFO</li>
+          <li><small>Medicare</small>Chief Medicare Officer</li>
+          <li><small>Leadership</small>Health plan CEO</li>
+          <li><small>Today</small>CEO, virtual specialty physician group</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNUP -->
+  <section id="updates" class="signup">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Launch updates</p>
+        <h2>Be first to know when the book is out.</h2>
+        <p style="margin-top:18px">Leave your email for the publication date, early excerpts, and occasional notes on Medicare Advantage. No spam, and your address is never sold or shared.</p>
+      </div>
+      <form class="form" id="signup-form" action="https://formsubmit.co/ajax/05a34b03a8453d1a3e9775cc1ba93679" method="POST" novalidate>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+        </div>
+        <div class="field">
+          <label for="reader">I'm reading as a…</label>
+          <select id="reader" name="reader">
+            <option value="">Prefer not to say</option>
+            <option>Health plan leader or staff</option>
+            <option>Clinician or provider organization</option>
+            <option>Medicare member or family caregiver</option>
+            <option>Broker, consultant, or investor</option>
+            <option>Student, researcher, or policy</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="hp" aria-hidden="true"><label for="company">Leave blank</label><input id="company" name="_honey" type="text" tabindex="-1" autocomplete="off"></div>
+        <input type="hidden" name="_subject" value="Decoded.Care launch list signup">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <button class="btn btn-primary" type="submit">Notify me</button>
+        <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+        <p class="fine">Used only to send Decoded.Care updates. Unsubscribe anytime.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Back to top">
+      <svg aria-hidden="true"><use href="#cipher-dot"/></svg>
+      <span>Decoded<b>.</b>Care</span>
+    </a>
+    <span class="tagline">Medicare Advantage, decoded.</span>
+    <span>&copy; <span id="yr">2026</span> Decoded.Care. All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var y=document.getElementById('yr'); if(y){y.textContent=new Date().getFullYear();}
+  var form=document.getElementById('signup-form');
+  var msg=document.getElementById('form-msg');
+  if(!form){return;}
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    msg.className='form-msg'; msg.textContent='';
+    var email=form.email.value.trim();
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+      msg.className='form-msg err'; msg.textContent='Please enter a valid email address.'; form.email.focus(); return;
+    }
+    if(form.action.indexOf('FORMSUBMIT_KEY')!==-1){ /* not configured */
+      msg.className='form-msg err'; msg.textContent='Signups open shortly. Please check back soon.'; return;
+    }
+    var btn=form.querySelector('button[type=submit]'); btn.disabled=true; btn.textContent='Sending…';
+    fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
+      .then(function(r){return r.json().catch(function(){return {};}).then(function(d){return {ok:r.ok,d:d};});})
+      .then(function(x){
+        var good=x.ok && (x.d.success===true || x.d.success==='true');
+        if(good){form.reset(); msg.className='form-msg ok'; msg.textContent="You're on the list. Thank you.";}
+        else{msg.className='form-msg err'; msg.textContent='Something went wrong. Please try again.';}
+      })
+      .catch(function(){msg.className='form-msg err'; msg.textContent='Network error. Please try again.';})
+      .then(function(){btn.disabled=false; btn.textContent='Notify me';});
+  });
+})();
+</script>
+</body>
+</html>
